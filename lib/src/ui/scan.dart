@@ -12,12 +12,13 @@ class _ScanPageState extends State<ScanPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Scan Page'),
-      ),
-      body: SingleChildScrollView(
-        child: Column(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Barcode Scanner Example'),
+        ),
+        body: Column(
           children: <Widget>[
             Expanded(
               child: QRView(
@@ -32,9 +33,10 @@ class _ScanPageState extends State<ScanPage> {
               ),
             ),
             Expanded(
-                child: Center(
-              child: Text('Result: $barcode'),
-            ))
+              child: Center(
+                child: Text('Result: $barcode'),
+              ),
+            ),
           ],
         ),
       ),
