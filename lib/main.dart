@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginandqr/src/ui/login.dart';
+import 'package:loginandqr/src/ui/menu.dart';
 import 'package:loginandqr/src/ui/scan.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => LoginScreen(),
+        '/menu': (context) => Menu(),
         '/scan': (context) => ScanPage()
       },
     );

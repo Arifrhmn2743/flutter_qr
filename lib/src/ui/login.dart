@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -12,7 +10,7 @@ class _LoginScreenState extends State<LoginScreen> {
   bool _hidepassword = true;
 
   String url = 'https://reqres.in/api/login';
-  SendRequest() async {
+  Future sendRequest() async {
     Map json = {"email": "eve.holt@reqres.in", "password": "cityslicka"};
     http.Response response = await http.post(url, body: json);
     if (response.statusCode == 200) {
@@ -21,11 +19,11 @@ class _LoginScreenState extends State<LoginScreen> {
           builder: (BuildContext context) {
             return AlertDialog(
               title: Text("Sukses"),
-              content: Text("Selamat Anda Sukses Login"),
+              content: Text("Login Berhasil"),
               actions: [
                 FlatButton(
                     onPressed: () {
-                      Navigator.popAndPushNamed(context, "/scan");
+                      Navigator.popAndPushNamed(context, "/menu");
                     },
                     child: Text('Ok'))
               ],
@@ -140,8 +138,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Container(
                       height: 40,
                       child: RaisedButton(
-                        onPressed: () {
-                          SendRequest();
+                        onPressed: () async {
+                          sendRequest();
                         },
                         child: Text("Login"),
                         color: Colors.blueAccent,
