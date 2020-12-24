@@ -13,7 +13,7 @@
         android:label="loginandqr"
         android:icon="@mipmap/ic_launcher">
          <meta-data android:name="com.google.android.geo.API_KEY"
-               android:value="AIzaSyBdDE8tzy5s6gTX3Gk_lpEK1eUB7fOZ-vg"/>
+               android:value="KEY"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
