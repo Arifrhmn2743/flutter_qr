@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginandqr/src/ui/login.dart';
+import 'package:loginandqr/src/ui/maps.dart';
 import 'package:loginandqr/src/ui/menu.dart';
 import 'package:loginandqr/src/ui/scan.dart';
 
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginScreen(),
         '/menu': (context) => Menu(),
-        '/scan': (context) => ScanPage()
+        '/scan': (context) => ScanPage(),
+        '/maps': (context) => MapsPage()
       },
     );
   }
