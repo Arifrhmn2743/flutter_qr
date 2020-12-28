@@ -89,6 +89,45 @@ class _MenuState extends State<Menu> {
                         ),
                       ))
                 ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox.fromSize(
+                      size: Size(100, 100), // button width and height
+                      child: ClipOval(
+                        child: Material(
+                          color: Colors.blueAccent, // button color
+                          child: InkWell(
+                            splashColor: Colors.black, // splash color
+                            onTap: () {
+                              Navigator.pushNamed(context, '/photo');
+                            }, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.photo_camera,
+                                  size: 50,
+                                  color: Colors.white,
+                                ), // icon
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Text(
+                                    "Take Photo",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 11),
+                                  ),
+                                ), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ))
+              ],
+            )
           ],
         ),
       ),
