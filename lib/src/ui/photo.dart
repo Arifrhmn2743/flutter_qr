@@ -1,5 +1,8 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:camera/camera.dart';
+import 'package:loginandqr/src/ui/take_picture.dart';
 
 class PhotoPage extends StatefulWidget {
   @override
@@ -16,23 +19,25 @@ class _PhotoPageState extends State<PhotoPage> {
         title: Text('Take Photo'),
       ),
       body: SafeArea(
-          child: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset("images/p.jpg"),
-          ),
-          FlatButton(
-            onPressed: () {
-              _showOptions(context);
-            },
-            child: Text("Take Picture", style: TextStyle(color: Colors.white)),
-            color: Colors.blueAccent,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-          )
-        ],
+          child: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            _path == null
+                ? Image.asset("images/p.jpg")
+                : Image.file(File(_path)),
+            FlatButton(
+              onPressed: () {
+                _showOptions(context);
+              },
+              child:
+                  Text("Take Picture", style: TextStyle(color: Colors.white)),
+              color: Colors.blueAccent,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            )
+          ],
+        ),
       )),
     );
   }
@@ -67,6 +72,19 @@ class _PhotoPageState extends State<PhotoPage> {
     final file = await ImagePicker.pickImage(source: ImageSource.gallery);
     setState(() {
       _path = file.path;
+    });
+  }
+
+  void _showCamera() async {
+    final cameras = await availableCameras();
+    final camera = cameras.first;
+
+    final result = await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => TakePicturePage(camera: camera)));
+    setState(() {
+      _path = result;
     });
   }
 }
