@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:loginandqr/src/ui/fcm.dart';
+import 'package:loginandqr/src/ui/input_print.dart';
 import 'package:loginandqr/src/ui/login.dart';
 import 'package:loginandqr/src/ui/maps.dart';
 import 'package:loginandqr/src/ui/menu.dart';
 import 'package:loginandqr/src/ui/photo.dart';
 import 'package:loginandqr/src/ui/scan.dart';
+import 'package:loginandqr/src/ui/vibrate_test.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +29,10 @@ class MyApp extends StatelessWidget {
         '/menu': (context) => Menu(),
         '/scan': (context) => ScanPage(),
         '/maps': (context) => MapsPage(),
-        '/photo': (context) => PhotoPage()
+        '/photo': (context) => PhotoPage(),
+        '/vibrate': (context) => VibrateTestPage(),
+        '/fcm': (context) => FcmPage(),
+        '/input_print': (context) => InputPrintPage()
       },
     );
   }

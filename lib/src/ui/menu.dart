@@ -125,9 +125,116 @@ class _MenuState extends State<Menu> {
                           ),
                         ),
                       ),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox.fromSize(
+                      size: Size(100, 100), // button width and height
+                      child: ClipOval(
+                        child: Material(
+                          color: Colors.blueAccent, // button color
+                          child: InkWell(
+                            splashColor: Colors.black, // splash color
+                            onTap: () {
+                              Navigator.pushNamed(context, '/vibrate');
+                            }, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.vibration,
+                                  size: 50,
+                                  color: Colors.white,
+                                ), // icon
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Text(
+                                    "Vibrate Test",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 11),
+                                  ),
+                                ), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
                     ))
               ],
-            )
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox.fromSize(
+                      size: Size(100, 100), // button width and height
+                      child: ClipOval(
+                        child: Material(
+                          color: Colors.blueAccent, // button color
+                          child: InkWell(
+                            splashColor: Colors.black, // splash color
+                            onTap: () {
+                              Navigator.pushNamed(context, '/fcm');
+                            }, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.notifications,
+                                  size: 50,
+                                  color: Colors.white,
+                                ), // icon
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Text(
+                                    "FCM Test",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 11),
+                                  ),
+                                ), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    )),
+                Padding(
+                    padding: const EdgeInsets.all(20.0),
+                    child: SizedBox.fromSize(
+                      size: Size(100, 100), // button width and height
+                      child: ClipOval(
+                        child: Material(
+                          color: Colors.blueAccent, // button color
+                          child: InkWell(
+                            splashColor: Colors.black, // splash color
+                            onTap: () {
+                              Navigator.pushNamed(context, '/input_print');
+                            }, // button pressed
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.print,
+                                  size: 50,
+                                  color: Colors.white,
+                                ), // icon
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 5),
+                                  child: Text(
+                                    "Print Test",
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 11),
+                                  ),
+                                ), // text
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ))
+              ],
+            ),
           ],
         ),
       ),
