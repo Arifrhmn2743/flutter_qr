@@ -39,6 +39,10 @@ dependencies:
   path_provider: ^1.4.2
   vibration: ^1.7.3
   firebase_messaging: ^6.0.13
+  esc_pos_bluetooth: ^0.2.8
+  image: ^2.1.19
+  esc_pos_utils: ^0.3.6
+  intl: ^0.16.1
 
 dev_dependencies:
   flutter_test:

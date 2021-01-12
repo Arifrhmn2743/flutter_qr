@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginandqr/src/ui/fcm.dart';
-import 'package:loginandqr/src/ui/input_print.dart';
+import 'package:loginandqr/src/ui/print.dart';
 import 'package:loginandqr/src/ui/login.dart';
 import 'package:loginandqr/src/ui/maps.dart';
 import 'package:loginandqr/src/ui/menu.dart';
@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/photo': (context) => PhotoPage(),
         '/vibrate': (context) => VibrateTestPage(),
         '/fcm': (context) => FcmPage(),
-        '/input_print': (context) => InputPrintPage()
+        '/input_print': (context) => PrintPage()
       },
     );
   }
