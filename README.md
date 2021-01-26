@@ -8,5 +8,5 @@ Honestly, I'm making this project just for my documentation of codes that maybe 
 * Take a photo and select from gallery
 * Vibration test
 * FCM Test
-* and Print Test (with Bluetooth)
+* and Print Test (with Bluetooth) [Link to printer](https://www.tokopedia.com/pandaretail/mini-portable-printer-ppob-kasir-58mm-thermal-panda-58b-usb-bluetooth)
 
