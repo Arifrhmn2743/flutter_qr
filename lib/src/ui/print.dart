@@ -32,8 +32,8 @@ class _PrintPageState extends State<PrintPage> {
   initSavetoPath() async {
     //read and write
     //image max 300px X 300px
-    final filename = 'yourlogo.png';
-    var bytes = await rootBundle.load("images/p.jpg");
+    final filename = 'a.png';
+    var bytes = await rootBundle.load('images/a.png');
     String dir = (await getApplicationDocumentsDirectory()).path;
     writeToFile(bytes, '$dir/$filename');
     setState(() {
@@ -215,7 +215,7 @@ class _PrintPageState extends State<PrintPage> {
                   child: RaisedButton(
                     color: Colors.brown,
                     onPressed: () {
-                      testPrint.sample(pathImage);
+                      testPrint.sample("images/a.png");
                     },
                     child: Text('PRINT TEST',
                         style: TextStyle(color: Colors.white)),
