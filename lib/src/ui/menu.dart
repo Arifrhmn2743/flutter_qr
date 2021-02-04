@@ -7,6 +7,7 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  bool _accept = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,6 +18,26 @@ class _MenuState extends State<Menu> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    flex: 1,
+                    child: RaisedButton(
+                      onPressed: () {},
+                      color: _accept ? Colors.green : Colors.red,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(10.0)),
+                      child: Text(
+                        "Check Permission",
+                        style: TextStyle(color: Colors.white),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[

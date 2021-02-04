@@ -21,10 +21,10 @@ class TestPrint {
     // Uint8List bytes = response.bodyBytes;
     bluetooth.isConnected.then((isConnected) {
       if (isConnected) {
-        bluetooth.printNewLine();
+        // bluetooth.printNewLine();
         //bluetooth.printCustom("HEADER", 3, 1);
         //   bluetooth.printNewLine();
-        bluetooth.printImage('images/a.png'); //path of your image/logo
+        bluetooth.printImage('images/ac.png'); //path of your image/logo
         // bluetooth.printNewLine();
         // bluetooth.printImageBytes(
         //     bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));

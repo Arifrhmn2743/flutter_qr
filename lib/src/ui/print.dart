@@ -32,8 +32,8 @@ class _PrintPageState extends State<PrintPage> {
   initSavetoPath() async {
     //read and write
     //image max 300px X 300px
-    final filename = 'a.png';
-    var bytes = await rootBundle.load('images/a.png');
+    final filename = 'ac.png';
+    var bytes = await rootBundle.load('images/ac.png');
     String dir = (await getApplicationDocumentsDirectory()).path;
     writeToFile(bytes, '$dir/$filename');
     setState(() {
@@ -145,6 +145,7 @@ class _PrintPageState extends State<PrintPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Blue Thermal Printer'),
@@ -215,7 +216,7 @@ class _PrintPageState extends State<PrintPage> {
                   child: RaisedButton(
                     color: Colors.brown,
                     onPressed: () {
-                      testPrint.sample("images/a.png");
+                      testPrint.sample("images/ac.png");
                     },
                     child: Text('PRINT TEST',
                         style: TextStyle(color: Colors.white)),
