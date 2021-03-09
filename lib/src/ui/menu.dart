@@ -25,7 +25,9 @@ class _MenuState extends State<Menu> {
                   Expanded(
                     flex: 1,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/upload');
+                      },
                       color: _accept ? Colors.green : Colors.red,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

@@ -65,12 +65,15 @@ class _PhotoPageState extends State<PhotoPage> {
         body: SafeArea(
       child: Column(children: <Widget>[
         _path == null ? Image.asset("images/p.jpg") : Image.file(File(_path)),
-        FlatButton(
+        TextButton(
           child: Text("Take Picture", style: TextStyle(color: Colors.white)),
-          color: Colors.green,
           onPressed: () {
             _showOptions(context);
           },
+        ),
+        TextButton(
+          child: Text("upload Picture", style: TextStyle(color: Colors.white)),
+          onPressed: () {},
         )
       ]),
     ));

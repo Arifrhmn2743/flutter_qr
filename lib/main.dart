@@ -6,6 +6,7 @@ import 'package:loginandqr/src/ui/maps.dart';
 import 'package:loginandqr/src/ui/menu.dart';
 import 'package:loginandqr/src/ui/photo.dart';
 import 'package:loginandqr/src/ui/scan.dart';
+import 'package:loginandqr/src/ui/upload.dart';
 import 'package:loginandqr/src/ui/vibrate_test.dart';
 
 void main() {
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         '/photo': (context) => PhotoPage(),
         '/vibrate': (context) => VibrateTestPage(),
         '/fcm': (context) => FcmPage(),
-        '/input_print': (context) => PrintPage()
+        '/input_print': (context) => PrintPage(),
+        '/upload': (context) => UploadFiles()
       },
     );
   }
